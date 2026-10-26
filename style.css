@@ -43,3 +43,50 @@ h1 {
   background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
   box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
 }
+
+.container {
+  text-align: center;
+}
+
+.marker {
+  display: block;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.15s ease, outline 0.15s ease;
+}
+
+.marker:hover {
+  transform: scale(1.06);
+}
+
+.marker.selected {
+  outline: 3px solid #222;
+  outline-offset: 5px;
+}
+
+.drawing-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 28px auto 12px;
+  font-family: Arial, sans-serif;
+}
+
+#clear-button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#drawing-canvas {
+  display: block;
+  width: min(90%, 700px);
+  height: 400px;
+  margin: 0 auto 30px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: white;
+  cursor: crosshair;
+  touch-action: none;
+}
